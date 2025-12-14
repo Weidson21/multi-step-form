@@ -6,6 +6,7 @@ const email = document.querySelector("#emaill");
 const nome = document.querySelector("#nome");
 const password = document.querySelector("#senha");
 const repassword = document.querySelector("#confirmar");
+const usuario = document.querySelector("#usuario");
 
 let current = 0;
 
@@ -18,7 +19,7 @@ function showStep(index) {
 
 nextBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    if (!email.value.trim() || !nome.value.trim() || !email){
+    if (!email.value.trim() || !nome.value.trim()){
         alert("Preencha todos os campos obrigatórios!");
         email.focus();
         return false;
