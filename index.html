@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi step form</title>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="progress">
+                <span class="step active">1</span>
+                <span class="step">2</span>
+                <span class="step">3</span>
+            </div>
+            <form method="get" class="multiStepForm">
+
+                <div class="form-step active">
+                    <!--Etapa 1-->
+                    <h1>Dados pessoais</h1>
+                    <label for="nome">Nome completo <input type="text" id="nome" required></label>
+                    <label for="emaill">E-mail <input type="email"  id="emaill" required></label>
+
+                    <div><button class="next" type="button">Próximo</button></div>
+                </div>
+
+                    <!--Etapa 2-->
+                <div class="form-step">
+                    <label for="usuario">Usuário <input type="text" id="usuario" required minlength="6" maxlength="10"></label>
+                    <label for="senha">Senha <input type="password" id="senha" required></label>
+                    <label for="confirmar">Confirmar senha <input type="password"  id="confirmar" required></label>
+
+                    <div><button class="back" type="button">Voltar</button></div>
+                    <div><button class="next" type="button">Próximo</button></div>
+                </div>
+
+                    <!--Etapa 3-->
+                <div class="form-step">
+                    <h3>Preferências</h3>
+                    <div id="box">
+                        <label for="whatsapp">
+                            <input type="checkbox" id="whatsapp" class="check">
+                            Whatsapp
+                        </label>
+                        <label for="email">
+                            <input type="checkbox" id="email" class="check">
+                            E-mail
+                        </label>
+                        <label for="sms">
+                            <input type="checkbox" id="sms" class="check">
+                            SMS
+                        </label>
+                        <div><button class="back" type="button">Voltar</button></div>
+                        <div><button type="submit" class="enviar">Enviar</button></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="interação.js"></script>
+</body>
+</html>
