@@ -67,7 +67,6 @@ body, html{
     transform: translateX(20px);
     transition: .4s ease;
 }
-
 .form-step > label{
     font-size: 1.1rem;
 }
